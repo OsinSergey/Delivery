@@ -1,0 +1,381 @@
+@import vars
+@import fonts
+@import libs
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+*
+	outline: 0 none
+	box-sizing: border-box
+
+input, textarea, button, a
+	outline: 0 none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+h2
+	margin: 0
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: 'Roboto', sans-serif
+	overflow-x: hidden
+	color: $text
+
+// Custom Sass / Remove before use
+
+.container
+	max-width: 1200px
+	margin: 0 auto
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+header
+	display: flex
+	align-items: center
+	justify-content: space-between
+	padding-top: 44px
+	margin-bottom: 40px
+.logo__link
+	margin-right: 30px
+.search-input
+	border: 1px solid #D9D9D9
+	border-radius: 2px
+	padding: 8px 12px 8px 35px
+	max-width: 690px
+	width: 100%
+	background-image: url(../img/home-search.svg)
+	background-repeat: no-repeat
+	background-position: left 12px center
+	color: #BFBFBF
+	line-height: 24px
+	&::placeholder
+		color: #BFBFBF
+
+.buttons
+	display: flex
+	align-items: center
+	margin-left: 30px
+.button
+	background-color: #1890FF
+	border-radius: 2px
+	border: 1px solid #1890FF
+	color: #ffffff
+	display: flex
+	align-items: center
+	padding: 8px 16px
+	line-height: 24px
+	font-size: 16px
+	outline: none
+	cursor: pointer
+.button-gray
+	border: 1px solid #D9D9D9
+	background-color: #fff
+	margin-left: 9px
+	box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.0015)
+	color: #595959
+	img
+		margin-right: 6px
+
+.main
+	background: linear-gradient(180deg, rgba(245, 245, 245, 0) 1.04%, #F5F5F5 100%)
+.promo
+	box-shadow: 0px 7px 12px rgba(158, 158, 163, 0.1)
+	background: #ffc107 url(../img/picca.png) no-repeat top -120px	right -100px / 600px
+	border-radius: 10px
+	padding: 68px
+	color: #302C34
+	overflow: hidden
+	margin-bottom: 56px
+	&-offer
+		max-width: 538px
+		width: 100%
+		&__h2
+			font-size: 39px
+			line-height: 46px
+			margin-bottom: 15px
+			font-weight: 700
+		&__description
+			font-size: 24px
+			margin: 0
+			line-height: 28px
+.card
+	padding-bottom: 90px
+	&_head
+		display: flex
+		align-items: center
+		justify-content: space-between
+		margin-bottom: 44px
+		&-h2
+			font-size: 36px
+			line-height: 42px
+			font-weight: 700
+			margin-bottom: 10px
+		.card_items-item__frame-info
+			margin-right: auto
+			margin-left: 30px
+			.rating
+				flex-basis: 0
+		&-search
+			border: 1px solid #D9D9D9
+			border-radius: 2px
+			max-width: 306px
+			color: #BFBFBF
+			padding: 5px 12px 5px 32px
+			font-size: 16px
+			line-height: 24px
+			background-image: url(../img/search.svg)
+			background-repeat: no-repeat
+			background-position: left 10px center
+			&::placeholder
+				color: #BFBFBF
+	&_items
+		display: flex
+		align-items: center
+		justify-content: space-between
+		flex-wrap: wrap
+
+		&-item
+			box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05)
+			border-radius: 7px
+			margin-bottom: 30px
+			overflow: hidden
+			cursor: pointer
+			background-color: #fff
+			flex-basis: 32%
+			text-decoration: none
+			color: #000
+			&:hover, &:focus, &:active
+				text-decoration: none
+				color: #000
+			&__img
+				width: 384px
+				height: 250px
+				object-fit: cover
+			&__frame
+				padding: 20px 24px 34px
+				background-color: #fff
+				&-title
+					display: flex
+					align-items: center
+					justify-content: space-between
+					.title-h2
+						font-weight: 700
+
+					.title-tag
+						color: #ffffff
+						padding: 1px 8px
+						background: #262626
+						border-radius: 2px
+						font-size: 12px
+						line-height: 20px
+				&-info
+					display: flex
+					align-items: center
+					flex-wrap: wrap
+
+					.rating
+						display: flex
+						align-items: center
+						margin-right: 26px
+						color: #FFC107
+						font-size: 18px
+						font-weight: 900
+						line-height: 32px
+						img
+							margin-right: 7px
+.price,.category
+	font-size: 18px
+	line-height: 32px
+	color: #8C8C8C
+	display: flex
+	align-items: center
+	white-space: nowrap
+.dots
+	display: block
+	background: #8C8C8C
+	border-radius: 50%
+	width: 5px
+	height: 5px
+	margin: 0 10px
+
+.category
+
+	text-overflow: ellipsis
+	overflow: hidden
+	max-width: 130px
+.title
+	font-size: 24px
+	line-height: 32px
+
+	// Futter
+
+.footer
+
+	padding: 60px 0 60px
+	background-color: #fff
+	&_wrap
+		display: flex
+		align-items: center
+		justify-content: space-between
+		font-size: 18px
+		line-height: 21px
+		.logo__link
+			margin: 0
+	&_main
+		margin-left: 35px
+		margin-right: auto
+		display: flex
+		align-items: center
+
+		ul
+			margin: 0
+			padding: 0
+			li
+				text-decoration: none
+				display: inline-block
+				margin-right: 15px
+				&:last-child
+					margin-right: 0
+		&-link
+			color: #595959
+			text-decoration: none
+			display: block
+			transition: color 0.4s
+
+			&:hover
+				color: lighten(#595959,25%)
+				text-decoration: none
+	&_social
+		display: flex
+		align-items: center
+		a:not(:last-child)
+			margin-right: 21px
+
+.card_items-item__frame-title
+	.restorant_title
+		font-weight: 400
+		font-size: 24px
+		line-height: 32px
+		margin-bottom: 10px
+.description
+	color: #8C8C8C
+	font-size: 18px
+	line-height: 21px
+	margin-bottom: 24px
+.card_button
+	display: flex
+	align-items: center
+	.button-cart-text
+		margin-right: 5px
+	.card_button_price
+		font-weight: 700
+		font-size: 20px
+		line-height: 32px
+		margin-left: 32px
+
+.modal
+	visibility: hidden
+	opacity: 0
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background: rgba(#000,0.4)
+	display: flex
+	transition: all 0.5s
+
+	&-dialog
+		background-color: #fff
+		border-radius: 5px
+		max-width: 780px
+		width: 95%
+		margin: auto
+		padding: 40px 45px
+	&-header
+		display: flex
+		align-items: center
+		justify-content: space-between
+		margin-bottom: 40px
+
+	&-title
+		margin: 0
+		font-size: 36px
+		font-weight: 700
+		line-height: 42px
+	&-close
+		font-size: 46px
+		padding: 0
+		background: transparent
+		border: none
+		cursor: pointer
+	&-body
+		margin-bottom: 52px
+	&-food-row
+		display: flex
+		align-items: center
+		justify-content: space-between
+		border-bottom: 1px solid #D9D9D9
+		padding-bottom: 8px
+		margin-bottom: 15px
+
+	&-food-name
+		font-size: 18px
+		line-height: 32px
+	&-food-price
+		font-size: 20px
+		line-height: 32px
+		margin-left: auto
+		margin-right: 47px
+	&-food-couter
+		display: flex
+		align-items: center
+	&-food-couter-button
+		width: 39px
+		height: 32px
+		background: transparent
+		border: 1px solid #40A9FF
+		border-radius: 2px
+		font-size: 14px
+		line-height: 22px
+		padding: 0
+		color: #40a9ff
+	&-food-couter-input
+		margin-right: 12px
+		margin-left: 12px
+		font-size: 16px
+		line-height: 24px
+	&-footer
+		display: flex
+		align-items: center
+		justify-content: space-between
+.prace-tag
+	padding: 15px 20px
+	background: #262626
+	color: #fafafa
+	font-size: 20px
+	line-height: 23px
+	border-radius: 5px
+	font-weight: 700
+	
+.footer-buttons
+	display: flex
+	align-items: center
+.active-modal
+	visibility: visible
+	opacity: 1
+	transition: all 0.5s
+	
+//Media Import
+@import media
